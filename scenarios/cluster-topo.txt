@@ -1,0 +1,31 @@
+# cluster-topo.txt
+
+router
+
+# each line in this section represents one router and should have the following data
+# node  comment     yPos    xPos
+ap1	N/A	-20	-200
+ap2	N/A	-20	-0
+ap3	N/A	-20	200
+ap4	N/A	-20	400
+rtr1	N/A	80	-100
+rtr2	N/A	80	300
+rtr3	N/A	180	100
+prod	N/A	180	300
+
+link
+
+# Each line should be in the following format (only first two are required, the rest can be omitted)
+#srcNode   dstNode     bandwidth   metric  delay   queue
+# bandwidth: link bandwidth
+# metric: routing metric
+# delay:  link delay
+# queue:  MaxPackets for transmission queue on the link (both directions)
+ap1	rtr1	10Mbps	1	2ms	10
+ap2	rtr1	10Mbps	1	2ms	10
+ap3	rtr2	10Mbps	1	2ms	10
+ap4	rtr2	10Mbps	1	2ms	10
+rtr1	rtr3	10Mbps	1	50ms	10
+rtr2	rtr3	10Mbps	1	50ms	10
+rtr3	prod	10Mbps	1	100ms	10
+
